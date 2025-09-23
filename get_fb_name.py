@@ -25,6 +25,7 @@ def get_fb_name(url):
     }
 
     # Just fetch normally, Requests will decode plain text
+    
     resp = requests.get(url, headers=headers, allow_redirects=False)
     resp.encoding = resp.encoding or "utf-8"
     body_text = resp.text
