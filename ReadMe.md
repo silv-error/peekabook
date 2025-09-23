@@ -1,6 +1,6 @@
-# 🎥 Reel Peeker
+# 🎥 Peekabook
 
-Reel Peeker is a simple Python tool that extracts the real Facebook name from a shared reel or post link.
+Peekabook is a simple Python tool that extracts the real Facebook name from a shared reel or post link.
 
 - ✨ Features
 - 🔎 Extracts the full name from shared Facebook reels/posts

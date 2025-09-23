@@ -1,3 +1,4 @@
+import signal
 import sys
 import argparse
 import requests
@@ -11,22 +12,26 @@ init(autoreset=True)
 VERSION = "1.0"
 AUTHOR = "silv"
 
-BANNER = r"""
-    ██████╗ ███████╗███████╗██╗                     
-    ██╔══██╗██╔════╝██╔════╝██║                     
-    ██████╔╝█████╗  █████╗  ██║                     
-    ██╔══██╗██╔══╝  ██╔══╝  ██║                     
-    ██║  ██║███████╗███████╗███████╗                
-    ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝                
-                                                
-    ██████╗ ███████╗███████╗██╗  ██╗███████╗██████╗ 
-    ██╔══██╗██╔════╝██╔════╝██║ ██╔╝██╔════╝██╔══██╗
-    ██████╔╝█████╗  █████╗  █████╔╝ █████╗  ██████╔╝
-    ██╔═══╝ ██╔══╝  ██╔══╝  ██╔═██╗ ██╔══╝  ██╔══██╗
-    ██║     ███████╗███████╗██║  ██╗███████╗██║  ██║
-    ╚═╝     ╚══════╝╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝      
-                                    REEL PEEKER v{version}
-                                    Author: {author}
+BANNER = f"""
+
+    [Peekabook v{VERSION}]
+               _____
+              /  _)))
+             (___|''-
+               ; _=
+            ___//_   /_    _________
+           /)  \/ )  ))   |.        |_
+          //| - -/\\/;    |.        |:|
+         |/ |   /  \/     |.        |/
+         ;  :::::         |_________|
+       _(/ //////\\\\\     __|___|__
+    ___/|_//////// / /____[_________]_
+                 |/|/     Author: {AUTHOR} 
+                 | |
+                (|(|
+               ,||||
+                '='= 
+----------------------------------------------------                   
 """.format(version=VERSION, author=AUTHOR)
 print(Fore.CYAN + BANNER + Style.RESET_ALL)
 
@@ -37,7 +42,7 @@ def main():
 
     try:
         # Input URL
-        url = args.url or input(Fore.YELLOW + "Enter shared reel: " + Style.RESET_ALL).strip()
+        url = args.url or input(Fore.YELLOW + "[?] Enter URL: " + Style.RESET_ALL).strip()
         if not url:
             print(Fore.RED + "[!] No URL provided. Exiting.")
             sys.exit(1)
@@ -70,7 +75,6 @@ def main():
     except Exception as e:
         print(Fore.RED + f"[!] Unexpected error: {e}")
         sys.exit(1)
-
 
 if __name__ == "__main__":
   while True:
