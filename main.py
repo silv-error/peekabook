@@ -30,8 +30,8 @@ BANNER = rf"""
                  | |
                 (|(|
                ,||||
-                '='=                 AUTHOR: {AUTHOR}
-----------------------------------------------------
+                '='=                 Author: {AUTHOR}
+                
 """.format(version=VERSION, author=AUTHOR)
 print(Fore.CYAN + BANNER + Style.RESET_ALL)
 
