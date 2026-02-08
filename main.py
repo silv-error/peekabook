@@ -3,13 +3,12 @@ import sys
 import argparse
 import requests
 from colorama import Fore, Style, init
-from get_location_url import get_location_url
 from get_fb_name import get_fb_name
 
 # Initialize colorama
 init(autoreset=True)
 
-VERSION = "1.0"
+VERSION = "1.0.1"
 AUTHOR = "silv"
 
 BANNER = rf"""
@@ -50,8 +49,7 @@ def main():
         print(Fore.CYAN + "[*] Retrieving the FB name of the user...")
 
         # Process
-        location_url = get_location_url(url)
-        victim_name = get_fb_name(location_url)
+        victim_name = get_fb_name(url)
 
         if not victim_name:
             print(Fore.RED + "[!] Shared post is invalid or link expired. Try another one.")
