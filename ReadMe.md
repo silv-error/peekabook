@@ -11,10 +11,21 @@ Peekabook is a simple Python tool that extracts the real Facebook name from a sh
 ### 📦 Requirements
 
 Python 3.8+
+PyPi
 
 🚀 Usage
 
 - Clone or download this repo.
+- Download dependencies:
+```
+Windows
+./venv/Scripts/activate
+
+Linux
+./venv/bin/activate
+
+pip install -r requirements.txt
+```
 - Run the script:
 
 ```
